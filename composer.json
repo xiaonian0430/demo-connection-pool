@@ -1,0 +1,21 @@
+{
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-swoole": "^4.8.0",
+        "ext-sockets": "*",
+        "topthink/framework": "^6.0.13",
+        "topthink/think-orm": "^2.0.54"
+    },
+    "require-dev": {
+        "swoole/ide-helper": "^4.8.0"
+    },
+    "suggest": {
+        "swoole/ide-helper": "This package contains IDE help files for Swoole. You may use it in your IDE to provide accurate autocompletion."
+    }
+}
