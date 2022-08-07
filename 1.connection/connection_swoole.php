@@ -4,17 +4,15 @@
  */
 declare(strict_types=1);
 use Swoole\Coroutine;
-use function Swoole\Coroutine\run as coRun;
-use function Swoole\Coroutine\go as coGo;
 //让原来的同步IO的代码变成可以协程调度的异步IO，即一键协程化
 Coroutine::set(['hook_flags' => SWOOLE_HOOK_TCP]);
 
 //创建协程容器
-coRun(function() {
+Coroutine\run(function() {
 
     for($i=0;$i<1;$i++){
         //在协程容器中创建一个协程
-        coGo(function () use($i) {
+        Coroutine\go(function () use($i) {
             demo();
         });
     }
